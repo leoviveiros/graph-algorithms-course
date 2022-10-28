@@ -28,6 +28,10 @@ public class Graph {
         }
     }
 
+    public void addEdge(Vertex start, Vertex end) {
+        this.addEdge(start, end, null);
+    }
+
     public void removeEdge(Vertex start, Vertex end) {
         start.removeEdge(end);
 
@@ -62,6 +66,10 @@ public class Graph {
 
     public boolean isWeighted() {
         return isWeighted;
+    }
+
+    public Vertex getStartingVertex() {
+        return this.vertices.get(0);
     }
 
     public static void main(String[] args) {
